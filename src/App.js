@@ -1,14 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import logo from './logo.svg';
+//import logo from './logo.svg';
+import Layout from './Layout';
 import './App.css';
 
 const App = () => {
   return ( 
-    <Router>
+    <Router basename='/currency_converter'>
       <Layout>
         <Switch>
-          <Route path="/" exact component={Home} />
+          <Route path="/" exact component={Layout} />
           <Route render={() => <h1>404 Not found</h1>} />
         </Switch>
       </Layout>
