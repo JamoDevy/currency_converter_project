@@ -9,7 +9,7 @@ const App = () => {
     <Router basename='/currency_converter'>
       <Layout>
         <Switch>
-          <Route path="/" exact component={Layout} />
+          {/* <Route path="/" exact component={Layout} /> */}
           <Route render={() => <h1>404 Not found</h1>} />
         </Switch>
       </Layout>
