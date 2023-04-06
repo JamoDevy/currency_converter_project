@@ -18,6 +18,7 @@ class CurrencyConverter extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.changeFromBase = this.changeFromBase.bind(this);
+    this.changeToRate = this.changeToRate.bind(this);
 }
 
 componentDidMount() {
@@ -33,10 +34,14 @@ handleChange(event) {
 }
 
 changeFromBase(event) {
+    this.setState({fromBase: event.target.value});
     this.getRatesData(event.target.value);
 }
 
-
+changeToRate(event) {
+    this.setState({toRate: event.target.value});
+    this.getRatesData(event.target.value);
+}
 
 handleSubmit(event) {
     event.preventDefault();
@@ -107,7 +112,7 @@ render () {
                     <form onSubmit={this.handleSubmit}>
                         <label>
                             To Rate:
-                            <select className="form-control" value={toRate} onChange={this.handleChange}>
+                            <select className="form-control" value={toRate} onChange={this.changeToRate}>
                                 {Object.keys(currencies).map(currencyAcronym => <option key={currencyAcronym} value={currencyAcronym}>{currencyAcronym}</option>)}
                                 </select>
                         </label>
