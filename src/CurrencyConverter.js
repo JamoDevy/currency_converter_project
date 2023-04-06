@@ -73,6 +73,24 @@ getRatesData = (base) => {
         .catch(error => console.error(error.message));
 }
 
+//Conversion Equations
+
+toBase(amount, rate){
+    return amount * (1/rate);
+}
+
+toQoute(amount, rate){
+    return amount * rate;
+}
+
+convert(amount, rate, equation){
+    const input = parseFloat(amount);
+        if (Number.isNaN(input)){
+            return '';
+        }
+        return equation(input, rate).toFixed(3);
+}
+
 
 render () {
 
@@ -124,10 +142,11 @@ render () {
             <div className="container" id="conversion">
                     <div className="row">
                         <div className="col-8">
-                            <h4>Conversion Solution</h4>
+                            <h4>Conversion Solution:</h4>
+                            
                         </div>
                         <div className="col-4">
-                            <button>Convert</button>
+                            <button onClick={this.convert}>Convert</button>
                         </div>
                     </div>
             </div>
