@@ -3,18 +3,21 @@
     display: inline;
 }
 
-#conversion {
-    margin-top: 30px;
-}
-
-.text-left {
-    margin-bottom: 20px;
-}
-
-.amountInput {
-    width: 60%;
-}
 
 #conversionContainer {
-    background-color: rgb(114, 137, 237);
+    background-color: rgb(26, 96, 33);
+    border-radius: 20px;
+}
+
+.form-control {
+    width: 200%;
+}
+
+#header {
+    padding-top: 20px;
+    color: white;
+}
+
+#label {
+    color: white;
 }

@@ -2,12 +2,6 @@
   text-align: center;
 }
 
-/* .navbar-brand {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  position: relative;
-} */
 
 .navbar {
   display: contents;
@@ -29,7 +23,9 @@
   display: inline-block;
 }
 
-
+#root {
+  background-color: rgb(157, 218, 173);
+}
 
 
 
