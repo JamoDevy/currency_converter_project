@@ -73,14 +73,14 @@ render () {
         <React.Fragment>
         <div className="container" id="conversionContainer">
            <div className="container">
-                <div className="text-left">
-                    <h2 className="mb-2" id="header">Currency Converter</h2>
+                <div className="text-center">
+                    <h2 className="mb-2" id="header">Exchange Rates Table</h2>
                 </div>
             </div>
 
         <div className="container" id="ratesContainer">
             <div className="row">
-                <div className="col-6">
+                <div className="col-12">
                     <form onSubmit={this.handleSubmit}>
                         <label id="label">
                             Select Base Rate:

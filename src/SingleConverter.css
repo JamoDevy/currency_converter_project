@@ -1,0 +1,44 @@
+.form-row {
+    display: inline;
+}
+
+.form-group {
+    width: 25%;
+}
+
+/* #base.form-control {
+    width: 100%;
+} */
+
+#converterBox {
+    background-color: rgb(26, 96, 33);
+    border-radius: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.input-group-prepend {
+    display: flex;
+}
+
+.form-control-sm {
+   width: 75px;
+    
+}
+
+#solution {
+    margin-top: 15px;
+    color: white;
+    
+}
+
+h3 {
+    width: 50%;
+    text-align: center;
+    padding-top: 15%;
+}
+
+
+
+
+
