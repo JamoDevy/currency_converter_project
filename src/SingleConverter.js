@@ -10,23 +10,23 @@ class SingleConverter extends React.Component {
         super(props);
 
         this.state = {
-            rate: 0,
-            baseAcronym: '',
-            baseValue: 0,
-            quoteAcronym: '',
-            quoteValue: 0,
+            rate: 1,
+            baseAcronym: 'USD',
+            baseValue: 1,
+            quoteAcronym: 'AUD',
+            quoteValue: 1.5,
             loading: false,
         };
     }
 
     componentDidMount() {
         const {baseAcronym, quoteAcronym} = this.state;
-            this.getRate(baseAcronym, quoteAcronym);
+        this.getRate(baseAcronym, quoteAcronym);
     }
 
     getRate = (base, quote) => {
         this.setState({loading: true});
-        fetch(`https://www.frankfurter.app/latest?`)
+        fetch(`https://www.frankfurter.app/latest?from=${base}`)
             .then(checkStatus)
             .then(json)
             .then(data => {
@@ -34,16 +34,12 @@ class SingleConverter extends React.Component {
                     throw new Error(data.error)
                 }
 
-                const rate = data.rates[quote] && data.rates[base];
-                const symbol = data.rates[symbol];
+                const rate = data.rates[quote];
                 const name = data.rates[base];
 
                 this.setState({
-                    name,
-                    symbol,
                     rate,
-                    baseValue: 1,
-                    quoteValue: Number((1 * rate).toFixed(3)),
+                    quoteValue: Number((this.state.baseValue * rate).toFixed(3)),
                     loading: false,
                 });
             })
@@ -111,13 +107,13 @@ render() {
                 <div className="row">
                     <div className="col-4">
                         <form className="form-group">
-                            <label>Start Base</label>
+                            <label>Base Currency</label>
                             <select value={baseAcronym} onChange={this.changeBaseAcronym} className="form-control">{currencyOptions}
                             </select>
                             <div className="input-group">
                                 <div className="input-group-prepend">
-                                     
-                                    <input id="base" className="form-control-sm" type='number'/>  
+                                {/* <div className="input-group-text">{currencies[baseAcronym]}</div> */}
+                                <input id="base" className="form-control-sm" value={baseValue} onChange={this.changeBaseValue} type='number'/>  
                                 </div>
                                 
                             </div>
@@ -128,13 +124,13 @@ render() {
                     </div>
                     <div className="col-4">
                         <form className="form-group">
-                            <label>To Base</label>
+                            <label>Target Currency</label>
                             <select value={quoteAcronym} onChange={this.changeQuoteAcronym} className="form-control">{currencyOptions}
                             </select>
                             <div className="input-group">
                                 <div className="input-group-prepend">
                                      
-                                    <input id="base" className="form-control-sm" value={baseValue} onChange={this.changeBaseValue} type='number'/>  
+                                <p className="bg-white px-3 py-2">{quoteValue}</p>  
                                 </div>
                             </div>
                         </form>
@@ -143,7 +139,7 @@ render() {
                 
                 <div className="container" id="solution">
                     <h2 className="mb-2">Conversion Solution</h2>
-                    <h4 className="conversionSolution">1 {baseAcronym} to 1 {quoteAcronym} = {rate.toFixed(4)} {currencies.quoteAcronym} </h4>
+                    <h4 className="conversionSolution">1 {baseAcronym} to 1 {quoteAcronym} = {rate.toFixed(4)} {currencies[quoteAcronym]} </h4>
                 </div>
             </div>
         </React.Fragment>
