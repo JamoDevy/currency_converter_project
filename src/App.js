@@ -7,14 +7,18 @@ import CurrencyConverter from './CurrencyConverter';
 
 import './App.css';
 
+const NotFound = () => {
+  return <h2>404 Not Found</h2>;
+}
+
 const App = () => {
   return ( 
     <Router>
       <Layout>
         <Switch>
-          <Route path="/" exact component={CurrencyConverter} />
+          <Route path="/currency_converter_project" component={CurrencyConverter} />
           <Route path="/currencyconverter" component={SingleConverter} />
-          <Route render={() => <h1>404 Not found</h1>} />
+          <Route component={NotFound} />
         </Switch>
       </Layout>
     </Router>
