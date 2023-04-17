@@ -5,6 +5,7 @@ import { checkStatus, json } from './utils/fetch.js';
 import currencies from './utils/currencies.js';
 import LiveRatesTable from'./LiveRatesTable.js';
 import './CurrencyConverter.css';
+import { Link } from "react-router-dom";
 
 
 class CurrencyConverter extends React.Component {
@@ -80,7 +81,7 @@ render () {
 
         <div className="container" id="ratesContainer">
             <div className="row">
-                <div className="col-12">
+                <div className="col-6">
                     <form onSubmit={this.handleSubmit}>
                         <label id="label">
                             Select Base Rate:
@@ -89,6 +90,10 @@ render () {
                                 </select>
                         </label>
                     </form>
+                </div>
+
+                <div className="col-6">
+                    <p className="linkToConverter">For 1 to 1 conversion rates <Link to="/currencyconverter">click here</Link> </p>
                 </div>
                 
             </div>

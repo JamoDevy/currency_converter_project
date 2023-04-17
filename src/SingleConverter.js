@@ -1,6 +1,7 @@
 import React from "react";
 import currencies from "./utils/currencies.js";
 import { checkStatus, json} from "./utils/fetch";
+import { Link } from "react-router-dom";
 import './SingleConverter.css';
 
 
@@ -146,6 +147,9 @@ render() {
                     <h4 className="conversionSolution">1 {baseAcronym} to 1 {quoteAcronym} = {rate.toFixed(4)} {currencies.quoteAcronym} </h4>
                 </div>
             </div>
+
+            <div className="container">
+                <Link to="/">Exchange Rates Table</Link></div>
         </React.Fragment>
     )
 }

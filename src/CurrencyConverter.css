@@ -21,3 +21,9 @@
 #label {
     color: white;
 }
+
+.linkToConverter {
+    color: white;
+    text-align: end;
+    padding-top: 20px;
+}
