@@ -1,6 +1,4 @@
-import { render } from "@testing-library/react";
 import React from "react";
-
 import { checkStatus, json } from './utils/fetch.js';
 import currencies from './utils/currencies.js';
 import LiveRatesTable from'./LiveRatesTable.js';

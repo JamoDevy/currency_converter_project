@@ -36,7 +36,7 @@ class SingleConverter extends React.Component {
                 }
 
                 const rate = data.rates[quote];
-                const name = data.rates[base];
+                // const name = data.rates[base];
 
                 this.setState({
                     rate,
@@ -93,7 +93,7 @@ class SingleConverter extends React.Component {
 
 render() {
 
-    const {rate , baseAcronym, baseValue, quoteAcronym, quoteValue, loading} = this.state;
+    const {rate , baseAcronym, baseValue, quoteAcronym, quoteValue} = this.state;
 
     const currencyOptions = Object.keys(currencies).map(currencyAcronym => <option key={currencyAcronym} value={currencyAcronym}>{currencyAcronym}</option>);
 
