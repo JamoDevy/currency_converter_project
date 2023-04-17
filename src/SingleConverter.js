@@ -107,12 +107,15 @@ render() {
                 <div className="row">
                     <div className="col-4">
                         <form className="form-group">
-                            <label>Base Currency</label>
+                            <label id="currencyLabels">Base Currency:</label>
                             <select value={baseAcronym} onChange={this.changeBaseAcronym} className="form-control">{currencyOptions}
                             </select>
+                            
+                            <small className="text-secondary">{currencies[baseAcronym].name}</small>
+                            
                             <div className="input-group">
-                                <div className="input-group-prepend">
-                                     
+                                <div className="input-group-prepend" id="unitAmount">
+                                    <label id="baseUnitAmounts" htmlFor="base">Base Unit Amount:</label>
                                     <input id="base" className="form-control-sm" value={baseValue} onChange={this.changeBaseValue} type='number'/>  
                                 </div>
                                 
@@ -124,12 +127,13 @@ render() {
                     </div>
                     <div className="col-4">
                         <form className="form-group">
-                            <label>Target Currency</label>
+                            <label id="currencyLabels">Target Currency:</label>
                             <select value={quoteAcronym} onChange={this.changeQuoteAcronym} className="form-control">{currencyOptions}
                             </select>
+                            <small className="text-secondary">{currencies[quoteAcronym].name}</small>
                             <div className="input-group">
-                                <div className="input-group-prepend">
-                                     
+                                <div className="input-group-prepend" id="targetQuote">
+                                    <label id="targetUnitAmounts">Target Conversion:</label>
                                     <p className="bg-white px-3 py-2">{quoteValue}</p>
                                 </div>
                             </div>

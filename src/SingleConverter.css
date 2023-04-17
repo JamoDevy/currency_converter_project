@@ -22,6 +22,15 @@
     
 }
 
+.form-control {
+    margin-bottom: 10px;
+}
+
+#currencyLabels {
+    color: white;
+    margin-bottom: 10px;
+}
+
 #solution {
     margin-top: 15px;
     color: white;
@@ -31,8 +40,43 @@
 h3 {
     width: 50%;
     text-align: center;
-    padding-top: 15%;
+    padding-top: 28%;
+    color: white;
 }
+
+#unitAmount {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+#targetQuote {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+p {
+    color: black;
+}
+
+.text-secondary {
+    padding-right: 50px;
+    color: white;
+    width: 100%;
+}
+
+#baseUnitAmounts {
+    margin-top: 25px;
+}
+
+#targetUnitAmounts {
+    margin-top: 37px;
+}
+
+
+    
+
 
 
 
