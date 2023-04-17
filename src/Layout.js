@@ -15,7 +15,7 @@ const Layout = (props) => {
 
             <footer className='p-3 bg-light'>
                 <div className='mb-2'>
-
+                    <span className="mr-3 text-secondary">Created by <a href='https://papaya-bubblegum-8f7570.netlify.app'>Devin Clarke</a> through <a href='https://www.altcademy.com/'> Altcademy</a></span>
                 </div>
             </footer>
         </React.Fragment>
