@@ -26,7 +26,7 @@ class SingleConverter extends React.Component {
 
     getRate = (base, quote) => {
         this.setState({loading: true});
-        fetch(`https://www.frankfurter.app/latest?from=${base}`)
+        fetch(`https://api.frankfurter.app/latest?from=${base}`)
             .then(checkStatus)
             .then(json)
             .then(data => {
@@ -112,8 +112,8 @@ render() {
                             </select>
                             <div className="input-group">
                                 <div className="input-group-prepend">
-                                {/* <div className="input-group-text">{currencies[baseAcronym]}</div> */}
-                                <input id="base" className="form-control-sm" value={baseValue} onChange={this.changeBaseValue} type='number'/>  
+                                     
+                                    <input id="base" className="form-control-sm" value={baseValue} onChange={this.changeBaseValue} type='number'/>  
                                 </div>
                                 
                             </div>
@@ -130,7 +130,7 @@ render() {
                             <div className="input-group">
                                 <div className="input-group-prepend">
                                      
-                                <p className="bg-white px-3 py-2">{quoteValue}</p>  
+                                    <p className="bg-white px-3 py-2">{quoteValue}</p>
                                 </div>
                             </div>
                         </form>
@@ -139,7 +139,7 @@ render() {
                 
                 <div className="container" id="solution">
                     <h2 className="mb-2">Conversion Solution</h2>
-                    <h4 className="conversionSolution">1 {baseAcronym} to 1 {quoteAcronym} = {rate.toFixed(4)} {currencies[quoteAcronym]} </h4>
+                    <h4 className="conversionSolution">1 {baseAcronym} to 1 {quoteAcronym} = {rate.toFixed(4)} {currencies.quoteAcronym} </h4>
                 </div>
             </div>
         </React.Fragment>
