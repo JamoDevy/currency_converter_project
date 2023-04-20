@@ -40,7 +40,7 @@ handleSubmit(event) {
 
 getRatesData = (base) => {
     this.setState({loading: true});
-    fetch('http://api.frankfurter.app/latest?')
+    fetch('https://api.frankfurter.app/latest?')
         .then(checkStatus)
         .then(json)
         .then(data => {
