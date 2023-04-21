@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/currency_converter_project/static/css/main.c2a65140.css",
-    "main.js": "/currency_converter_project/static/js/main.fbbd789e.js",
-    "static/js/787.ca7f2fcd.chunk.js": "/currency_converter_project/static/js/787.ca7f2fcd.chunk.js",
-    "index.html": "/currency_converter_project/index.html",
-    "main.c2a65140.css.map": "/currency_converter_project/static/css/main.c2a65140.css.map",
-    "main.fbbd789e.js.map": "/currency_converter_project/static/js/main.fbbd789e.js.map",
-    "787.ca7f2fcd.chunk.js.map": "/currency_converter_project/static/js/787.ca7f2fcd.chunk.js.map"
+    "main.css": "/JamoDevy/currency_converter_project/static/css/main.5a91d3a3.css",
+    "main.js": "/JamoDevy/currency_converter_project/static/js/main.fbd190b1.js",
+    "static/js/787.ca7f2fcd.chunk.js": "/JamoDevy/currency_converter_project/static/js/787.ca7f2fcd.chunk.js",
+    "index.html": "/JamoDevy/currency_converter_project/index.html",
+    "main.5a91d3a3.css.map": "/JamoDevy/currency_converter_project/static/css/main.5a91d3a3.css.map",
+    "main.fbd190b1.js.map": "/JamoDevy/currency_converter_project/static/js/main.fbd190b1.js.map",
+    "787.ca7f2fcd.chunk.js.map": "/JamoDevy/currency_converter_project/static/js/787.ca7f2fcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c2a65140.css",
-    "static/js/main.fbbd789e.js"
+    "static/css/main.5a91d3a3.css",
+    "static/js/main.fbd190b1.js"
   ]
 }
