@@ -91,7 +91,7 @@ render () {
                 </div>
 
                 <div className="col-6">
-                    <p className="linkToConverter">For 1 to 1 conversion rates <Link to="/SingleConverter">click here</Link> </p>
+                    <p className="linkToConverter">For 1 to 1 conversion rates <Link to="/currency_converter_project">click here</Link> </p>
                 </div>
                 
             </div>
