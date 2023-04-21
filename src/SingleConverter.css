@@ -74,6 +74,12 @@ p {
     margin-top: 37px;
 }
 
+canvas {
+    background-color: white;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
 
     
 
